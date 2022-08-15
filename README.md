@@ -89,6 +89,6 @@ date time INFO XXXXX --- [           main] ru.netology.shop.ShopApplication     
 
 ## Документация проекта
 
-- [План автоматизации тестирования](/Documentation/Plan.md)
-- [Отчёт по итогам автоматизированного тестирования](/Documentation/Report.md)
-- [Отчёт по итогам автоматизации](/Documentation/Summary.md)
+- [План автоматизации тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Plan.md)
+- [Отчёт по итогам автоматизированного тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Report.md)
+- [Отчёт по итогам автоматизации](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Summary.md)
