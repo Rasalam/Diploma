@@ -20,20 +20,19 @@
 
 ПО необходимое для запуска автотестов:
 
-- Git
-- Java JDK 11 или более поздняя. 
-- Google Chrome (или другой популярный браузер)
-- IntelliJ IDEA
-- Docker Desktop
+- Git;
+- Java JDK 11 или более поздняя;
+- Google Chrome (или другой популярный браузер);
+- IntelliJ IDEA;
+- Docker Desktop;
 
-Предварительно необходимо клонировать репозиторий проекта на локальный компьютер.
-Проект размещен на GitHub, ссылка на репозиторий **https://github.com/Rasalam/Diploma.git**. 
+Предварительно необходимо клонировать репозиторий проекта на локальный компьютер, ссылка на репозиторий **https://github.com/Rasalam/Diploma.git**. 
 
 ---
 
-## Установка и запуск
+## Установка и запуск SUT.
 
-#### 1. Запустить Docker Desktop. Для запуска тестируемого приложения потребуются образы: mysql (latest), postgres (latest), node-app 1.0.  
+#### 1. Запустить Docker Desktop. Для запуска SUT потребуются образы: mysql (latest), postgres (latest), node-app 1.0.  
 
 #### 2. Открыть проект в IntelliJ IDEA, дождаться завершения конфигурирования/подготовки проекта к сборке сборщиком Gradle.   
 
@@ -48,7 +47,7 @@ dcocker compose up -d
 docker-compose ps
 ```
 
-#### 5. В новой вкладке терминала, находясь в каталоге ./artifacts, запустить SUT командой:
+#### 5. В новой вкладке терминала запустить SUT командой:
 - Если в качестве СУБД выбрана MySQL:
 ```
 java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar ./artifacts/aqa-shop.jar
@@ -62,9 +61,9 @@ java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar ./artif
 ```
 date time INFO XXXXX --- [           main] ru.netology.shop.ShopApplication         : Started ShopApplication in 13.725 seconds (JVM running for 15.136)
 ```
-Адрес сервиса в браузере: _http://localhost:8080/_
+Адрес сервиса в браузере: http://localhost:8080/
 
-При необходиомсти перезапуска SUT для смены СУБД, во вкладке терминала с заущенный приложением для остановки SUT используется комбинацию клавиш Ctrl+C. 
+При необходиомсти перезапуска SUT для смены СУБД, необходимо закрыть в терминале текущий экземпляр SUT используя комбинацию клавиш Ctrl+C.
 
 #### 5. В новой вкладке терминала запустить выполнение автотестов:
 - Если в качестве СУБД выбрана MySQL:
