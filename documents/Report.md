@@ -13,28 +13,23 @@
 #### ***При работе с СУБД MySQL***
 * Успешных кейсов 28.57% (10 кейсов)
 * Неуспешных кейсов 71,43% (25 кейсов)
-<details>
-   <summary>Allure Report</summary>
 
-![ScreenShot]()
-  
-![ScreenShot]()
-  
-![ScreenShot]()
-</details>
 
 #### ***При работе с СУБД PostgreSQL***
 * Успешных кейсов 28.57% (10 кейсов)
 * Неуспешных кейсов 71,43% (25 кейсов)
+
 <details>
    <summary>Allure Report</summary>
 
-![ScreenShot]()
-
-![ScreenShot]()
-
-![ScreenShot]()
+[![ScreenShot]()](https://github.com/Rasalam/Diploma/blob/1670fd181c9f8d575dd12c3aab4afa7e426df4ed/documents/pictures/01%20Allure.png)
+  
+[![ScreenShot]()](https://github.com/Rasalam/Diploma/blob/1670fd181c9f8d575dd12c3aab4afa7e426df4ed/documents/pictures/02%20Allure.png)
+  
+[![ScreenShot]()](https://github.com/Rasalam/Diploma/blob/1670fd181c9f8d575dd12c3aab4afa7e426df4ed/documents/pictures/03%20Allure.png)
 </details>
+
+
 
 ## Общие рекомендации
 
