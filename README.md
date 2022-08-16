@@ -41,18 +41,18 @@
 ```
 dcocker compose up -d
 ```
-#### 4. Дождаться окончания процесса запуска контейнеров. Все три контейнера должны иметь статус "UP". Статус контейнеров отображается командой:
+#### 4. Дождаться окончания процесса запуска контейнеров. Все три контейнера должны иметь статус "UP". Статус контейнеров отображает команда:
 
 ```
 docker-compose ps
 ```
 
-#### 5. В новой вкладке терминала запустить SUT командой:
-- Если в качестве СУБД выбрана MySQL:
+#### 5. В новой вкладке терминала запустить SUT.
+Если в качестве СУБД выбрана MySQL, командой:
 ```
 java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar ./artifacts/aqa-shop.jar
 ```
-* Если в качестве СУБД выбрана Postgres:
+Если в качестве СУБД выбрана Postgres, командой:
 ```
 java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar ./artifacts/aqa-shop.jar
 ```
@@ -65,12 +65,12 @@ date time INFO XXXXX --- [           main] ru.netology.shop.ShopApplication     
 
 При необходиомсти перезапуска SUT для смены СУБД, необходимо закрыть в терминале текущий экземпляр SUT используя комбинацию клавиш Ctrl+C.
 
-#### 5. В новой вкладке терминала запустить выполнение автотестов:
-- Если в качестве СУБД выбрана MySQL:
+#### 5. В новой вкладке терминала запустить выполнение автотестов.
+Если в качестве СУБД выбрана MySQL, командой:
 ```
 ./gradlew clean test "-Datasource.url=jdbc:mysql://localhost:3306/app"
 ```
-* Если в качестве СУБД выбрана Postgres:
+Если в качестве СУБД выбрана Postgres, командой:
 ```
 ./gradlew clean test "-Datasource.url=jdbc:postgresql://localhost:5432/app"
 ```
@@ -91,3 +91,5 @@ date time INFO XXXXX --- [           main] ru.netology.shop.ShopApplication     
 - [План автоматизации тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Plan.md)
 - [Отчёт по итогам автоматизированного тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Report.md)
 - [Отчёт по итогам автоматизации](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Summary.md)
+- [Дипломное задание](https://github.com/netology-code/qa-diploma.git)
+
