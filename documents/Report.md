@@ -22,11 +22,11 @@
 <details>
    <summary>Allure Report</summary>
 
-[![ScreenShot](https://github.com/Rasalam/Diploma/blob/1670fd181c9f8d575dd12c3aab4afa7e426df4ed/documents/pictures/01%20Allure.png)
+[![ScreenShot](https://github.com/Rasalam/Diploma/blob/294f788bb090636c80fe8e5e25bcd6e783a0d455/documents/pictures/01%20Allure.png)
   
-[![ScreenShot](https://github.com/Rasalam/Diploma/blob/1670fd181c9f8d575dd12c3aab4afa7e426df4ed/documents/pictures/02%20Allure.png)
-  
-[![ScreenShot](https://github.com/Rasalam/Diploma/blob/1670fd181c9f8d575dd12c3aab4afa7e426df4ed/documents/pictures/03%20Allure.png)
+[![ScreenShot](https://github.com/Rasalam/Diploma/blob/294f788bb090636c80fe8e5e25bcd6e783a0d455/documents/pictures/02%20Allure.png)
+    
+[![ScreenShot](https://github.com/Rasalam/Diploma/blob/294f788bb090636c80fe8e5e25bcd6e783a0d455/documents/pictures/03%20Allure.png)
 </details>
 
 
