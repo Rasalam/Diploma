@@ -40,7 +40,7 @@
 #### 3. В терминале IntelliJ IDEA, находясь в корневом каталоге запустить контейнеры в Docker Desktop, используя команду   
 
 ```
-dcocker compose up -d
+docker compose up -d
 ```
 #### 4. Дождаться окончания процесса запуска контейнеров. Все три контейнера должны иметь статус "UP". Просмотр статуса контейнера возможен командой 
 
@@ -48,7 +48,7 @@ dcocker compose up -d
 docker-compose ps
 ```
 
-#### 5. В новой вкладке терминала, находясь в каталоге ./artifacts, запустить SUT командой:
+#### 5. В новой вкладке терминала запустить SUT командой:
 - Если в качестве СУБД выбрана MySQL:
 ```
 java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar ./artifacts/aqa-shop.jar
