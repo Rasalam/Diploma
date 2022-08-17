@@ -48,11 +48,9 @@ class CreditPageTest {
         String owner = OwnerHelper.getValidOwnerUpperCase("en");
         String cvv = CVVHelper.getValidCVV();
         creditPage.fillFormAndClickContinueButton(cardNumber, month, year, owner, cvv);
-//        creditPage.shouldChangeInscriptionOnButton();
-        creditPage.shouldShowApprovedNotice();
-        String expected = CardHelper.getCardStatus(0);
-        String actual = RequestSQL.getCreditRequestEntityStatus();
-        assertEquals(expected, actual);
+        String actualStatus = RequestSQL.getCreditRequestEntityStatus();
+        String expectStatus = CardHelper.getCardStatus(0);
+        assertEquals(expectStatus, actualStatus);
 
     }
 
@@ -66,6 +64,7 @@ class CreditPageTest {
         String owner = OwnerHelper.getValidOwnerUpperCase("en");
         String cvv = CVVHelper.getValidCVV();
         creditPage.fillFormAndClickContinueButton(cardNumber, month, year, owner, cvv);
+        creditPage.shouldChangeInscriptionOnButton();
         creditPage.shouldShowDeclinedNotice();
         String expected = CardHelper.getCardStatus(1);
         String actual = RequestSQL.getCreditRequestEntityStatus();
@@ -504,7 +503,7 @@ class CreditPageTest {
 
 
     @Test
-    @DisplayName("34. Notice 'Проверьте защитный код карты', ввод в поле 'CVV' цифр и спецсимвола")
+    @DisplayName("34. Notice 'Проверьте защитный код карты', ввод в поле 'CVV' цифр и спецсимвол")
     void shouldShowNoticeIfCVVContainsSpecialSymbol() {
         creditPage = mainPage.getCreditPage();
         String cardNumber = CardHelper.getApprovedCardNumber();
@@ -518,7 +517,7 @@ class CreditPageTest {
     }
 
     @Test
-    @DisplayName("35. Notice 'Проверьте защитный код карты', поле CVV не заполнено")
+    @DisplayName("35. Notice 'Поле обязательно для заполнения', поле CVV не заполнено")
     void shouldShowNoticeIfCVVIsEmpty() {
         creditPage = mainPage.getCreditPage();
         String cardNumber = CardHelper.getApprovedCardNumber();

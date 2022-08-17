@@ -64,11 +64,11 @@ date time INFO XXXXX --- [           main] ru.netology.shop.ShopApplication     
 
 Если в качестве СУБД выбрана MySQL, автотесты запускаются в новой вкладке терминала командой:
 ```
-./gradlew clean test "-Datasource.url=jdbc:mysql://localhost:3306/app"
+./gradlew clean test "-Ddatasource.url=jdbc:mysql://localhost:3306/app"
 ```
 Если в качестве СУБД выбрана Postgres, автотесты запускаются в новой вкладке терминала командой:
 ```
-./gradlew clean test "-Datasource.url=jdbc:postgresql://localhost:5432/app"
+./gradlew clean test "-Ddatasource.url=jdbc:postgresql://localhost:5432/app"
 ```
 ## Генерация отчетов.
 

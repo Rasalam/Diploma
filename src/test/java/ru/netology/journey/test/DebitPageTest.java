@@ -48,12 +48,11 @@ public class DebitPageTest {
         String owner = OwnerHelper.getValidOwnerUpperCase("en");
         String cvv = CVVHelper.getValidCVV();
         debitPage.fillFormAndClickContinueButton(cardNumber, month, year, owner, cvv);
-//        debitPage.shouldChangeInscriptionOnButton();
         debitPage.shouldShowApprovedNotice();
-        String expected = CardHelper.getCardStatus(0);
-        String actual = RequestSQL.getPaymentEntityStatus();
-        assertEquals(expected, actual);
-
+        String actualStatus = RequestSQL.getPaymentEntityStatus();
+        String expectStatus = CardHelper.getCardStatus(0);
+        assertEquals(expectStatus, actualStatus);
+        DateHelper.shouldAssertAmountAndPrice();
     }
 
     @Test
@@ -224,7 +223,7 @@ public class DebitPageTest {
     }
 
     @Test
-    @DisplayName("14. Notice 'Неверно указан срок действия карты', срок действия карты превышает 6 лет")
+    @DisplayName("14. Notice 'Неверно указан срок действия карты', срок действия карты превышает 5 лет")
     void shouldShowNotificationIfCardValidityExceedsSixYears() {
         debitPage = mainPage.getDebitPage();
         String cardNumber = CardHelper.getApprovedCardNumber();
@@ -518,7 +517,7 @@ public class DebitPageTest {
     }
 
     @Test
-    @DisplayName("35. Notice 'Проверьте защитный код карты', поле CVV не заполнено")
+    @DisplayName("35. Notice 'Поле обязательно для заполнения', поле CVV не заполнено")
     void shouldShowNoticeIfCVVIsEmpty() {
         debitPage = mainPage.getDebitPage();
         String cardNumber = CardHelper.getApprovedCardNumber();

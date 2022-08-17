@@ -8,14 +8,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class RequestSQL {
-    private static final String DB_URL = System.getProperty("db.url");
-
-    private void RequestSQl() {
-    }
+    private static final String datasourceURL = System.getProperty("datasource.url");
 
     @SneakyThrows
     public static Connection getConnection() {
-        return DriverManager.getConnection(DB_URL, "app", "pass");
+        return DriverManager.getConnection(datasourceURL, "app", "pass");
     }
 
     @SneakyThrows
@@ -33,18 +30,29 @@ public class RequestSQL {
         QueryRunner runner = new QueryRunner();
         String SqlStatus = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
         try (var connection = getConnection()) {
-            return runner.query(connection, SqlStatus, new ScalarHandler<>());
+            var result = runner.query(connection, SqlStatus, new ScalarHandler<>());
+            return (String) result;
         }
     }
-
 
     @SneakyThrows
     public static String getCreditRequestEntityStatus() {
         QueryRunner runner = new QueryRunner();
         String SqlStatus = "SELECT status FROM credit_request_entity ORDER BY created DESC LIMIT 1";
         try (var connection = getConnection()) {
-            return runner.query(connection, SqlStatus, new ScalarHandler<>());
+            var result = runner.query(connection, SqlStatus, new ScalarHandler<>());
+            return (String) result;
         }
     }
-}
 
+    @SneakyThrows
+    public static long getAmountPaymentEntity() {
+        QueryRunner runner = new QueryRunner();
+        String SqlStatus = "SELECT amount FROM payment_entity ORDER BY created DESC LIMIT 1";
+        try (var connection = getConnection()) {
+            return Long.parseLong(runner.query(connection, SqlStatus, new ScalarHandler<>()).toString());
+        }
+
+
+    }
+}
