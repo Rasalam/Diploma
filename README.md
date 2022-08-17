@@ -4,6 +4,13 @@
 
 ---
 
+## Документация проекта
+
+- [Дипломное задание](https://github.com/netology-code/qa-diploma.git)
+- [План автоматизации тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Plan.md)
+- [Отчёт по итогам автоматизированного тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Report.md)
+- [Отчёт по итогам автоматизации](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Summary.md)
+
 ## Предварительные шаги.
 
 Необходимо клонировать репозиторий проекта на локальный компьютер, ссылка на репозиторий: https://github.com/Rasalam/Diploma.git.
@@ -18,7 +25,7 @@
 
 ---
 
-## Установка и запуск SUT.
+## Запуск SUT.
 
 #### 1. Запустить Docker Desktop.
 
@@ -27,7 +34,7 @@
 #### 3. В терминале IntelliJ IDEA, запустить контейнеры в Docker Desktop командой:
 
 ```
-dcocker compose up -d
+docker compose up -d
 ```
 #### 4. Дождаться окончания процесса запуска контейнеров. Все три контейнера должны иметь статус "UP". Статус контейнеров отображает команда:
 
@@ -53,16 +60,19 @@ date time INFO XXXXX --- [           main] ru.netology.shop.ShopApplication     
 
 При необходиомсти перезапуска SUT для смены СУБД, необходимо закрыть в терминале текущий экземпляр SUT используя комбинацию клавиш Ctrl+C.
 
-#### 5. В новой вкладке терминала запустить выполнение автотестов.
-Если в качестве СУБД выбрана MySQL, командой:
+## Запуск автотестов.
+
+Если в качестве СУБД выбрана MySQL, автотесты запускаются в новой вкладке терминала командой:
 ```
 ./gradlew clean test "-Datasource.url=jdbc:mysql://localhost:3306/app"
 ```
-Если в качестве СУБД выбрана Postgres, командой:
+Если в качестве СУБД выбрана Postgres, автотесты запускаются в новой вкладке терминала командой:
 ```
 ./gradlew clean test "-Datasource.url=jdbc:postgresql://localhost:5432/app"
 ```
-#### 6. Генерация отчетов осуществляется с помощью Allure. Запуск генерации отчетов осуществляется командой в терминале:
+## Генерация отчетов.
+
+Генерация отчетов осуществляется с помощью Allure. Запуск генерации отчетов осуществляется командой в терминале:
 
 ```
 ./gradlew allureServe
@@ -73,11 +83,3 @@ date time INFO XXXXX --- [           main] ru.netology.shop.ShopApplication     
 После завершения работы с отчетами сервис allureServe должен быть остановлен сомбинацией клавиш Ctrl+C.
 
 ---
-
-## Документация проекта
-
-- [План автоматизации тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Plan.md)
-- [Отчёт по итогам автоматизированного тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Report.md)
-- [Отчёт по итогам автоматизации](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Summary.md)
-- [Дипломное задание](https://github.com/netology-code/qa-diploma.git)
-
