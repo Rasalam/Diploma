@@ -25,13 +25,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.junit.jupiter:junit-jupiter:5.8.2'
-    testImplementation 'mysql:mysql-connector-java:8.0.29'
+    implementation 'org.junit.jupiter:junit-jupiter:5.9.0'
+    testImplementation 'mysql:mysql-connector-java:8.0.30'
     testImplementation 'org.postgresql:postgresql:42.4.0'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
     testImplementation 'com.codeborne:selenide:6.6.6'
-    testImplementation 'io.qameta.allure:allure-selenide:2.17.3'
+    testImplementation 'io.qameta.allure:allure-selenide:2.18.1'
 
 }
 
