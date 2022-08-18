@@ -7,9 +7,9 @@
 ## Документация проекта
 
 - [Дипломное задание](https://github.com/netology-code/qa-diploma.git)
-- [План автоматизации тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Plan.md)
-- [Отчёт по итогам автоматизированного тестирования](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Report.md)
-- [Отчёт по итогам автоматизации](https://github.com/Rasalam/Diploma/blob/cdada8454a795ac8cceab86b2522f6a09663cdf5/documents/Summary.md)
+- [План автоматизации тестирования](https://github.com/Rasalam/Diploma/blob/12d947825f334a4e08695b8ff2d933d732cd82c2/documents/Plan.md)
+- [Отчёт по итогам автоматизированного тестирования](https://github.com/Rasalam/Diploma/blob/12d947825f334a4e08695b8ff2d933d732cd82c2/documents/Report.md)
+- [Отчёт по итогам автоматизации](https://github.com/Rasalam/Diploma/blob/12d947825f334a4e08695b8ff2d933d732cd82c2/documents/Summary.md)
 
 ## Предварительные шаги.
 
